@@ -10,6 +10,10 @@ this error means that the system dont let you create one more thread due to reso
 
 - compile then execute [MaxThreadCounter](./MaxThreadCounter.java)
 
+````shell
+MAX_THREAD_LIMIT=100000 java -Xms12029m -Xmx12029m -Xss256k MaxThreadCounter
+````
+
 # Linux thread limitations
 
 - kernel pid max
@@ -17,6 +21,11 @@ this error means that the system dont let you create one more thread due to reso
 ````shell
 $ sysctl kernel.pid_max
 kernel.pid_max = 32768
+# theoretical maximum of 32768 (2^15) for 32 bit systems or 4194304 (2^22) for 64 bit
+
+update it as root
+# echo 100000 > /proc/sys/kernel/pid_max
+cat /proc/sys/kernel/pid_max
 ````
 
 - kernel thread max
@@ -71,4 +80,7 @@ $ cat /etc/systemd/system/my-service.service.d/00-limits.conf # example
 [Service]
 LimitNOFILE=infinity:infinity
 TasksMax=30000
+
+# set user limit
+$ sudo systemctl set-property user-1013.slice TasksMax=100000
 ````
