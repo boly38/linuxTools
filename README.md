@@ -8,6 +8,7 @@ Goal of this repository is to capitalize small samples, easy to understand, and 
 - A sample must provide a readme with an HowTo.
 
 ## Subjects
+- [ipinfo](./integration/ipinfo_io/ipinfo.md) - get information from a given ip (or from my current ip)
 - [Threads limit](./threads/ThreadLimits.md) - how to diagnose and test (java) linux thread limits
 
 ### Integrations
