@@ -8,3 +8,6 @@ _draft/
 
 # secrets
 .env
+
+# classes
+**/*.class
