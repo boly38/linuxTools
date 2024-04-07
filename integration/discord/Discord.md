@@ -10,7 +10,7 @@
  * go to discord #channel parameters/integration to create your own webhook url
  * set webhook url with token as environment variable
 ````shell
-export DISCORD_WEBHOOK_TOKEN=https://discord.com/api/webhooks/xxxx/update_me
+export DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/xxxx/update_me
 ````
 
 ### send text + file
