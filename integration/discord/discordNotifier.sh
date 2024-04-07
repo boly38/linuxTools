@@ -43,5 +43,6 @@
     curl_args+=("-X POST" "${DISCORD_WEBHOOK_URL}")
     # call curl
     # echo curl "${curl_args[@]}" || echo "unable to discord notify"
+    # shellcheck disable=SC2294 # keep by hand args
     eval curl "${curl_args[@]}" || echo "unable to discord notify"
   }

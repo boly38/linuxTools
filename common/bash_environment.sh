@@ -15,7 +15,7 @@ load_local_dot_env_file() {
     echo "$LOCAL_DOT_ENV does not exist."
     exit ${BASH_EXIT_ERROR};
   fi
-  # shellcheck source=.env
+  # shellcheck disable=SC1090 # this file is already analysed and source didnt work
   source "${LOCAL_DOT_ENV}" set
   # echo "${LOCAL_DOT_ENV} loaded";
 }
