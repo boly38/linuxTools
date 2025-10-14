@@ -15,3 +15,9 @@ Goal of this repository is to capitalize small samples, easy to understand, and 
 ### Integrations
 
 - [Discord](./integration/discord/Discord.md) - how to send small notification using curl+webhook
+- [SShNotify](./integration/sshd/SshNotify.md) - et notified when someone ssh to your VM/VPS.
+
+
+## How to contribute ?
+
+cf. [CONTRIBUTING](.github/CONTRIBUTING.md)
