@@ -22,7 +22,8 @@ Install and create automatically a draft release version using [gh client](https
 
 Example to create v1.0.0
 ```bash
-gh release create v1.0.0 --draft --generate-notes
+VERSION=v1.0.0 \
+gh release create "$VERSION" --draft --generate-notes
 ```
 this will make a new draft release. Verify it in [releases list](https://github.com/boly38/linuxTools/releases)
 
