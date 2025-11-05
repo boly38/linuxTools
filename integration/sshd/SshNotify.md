@@ -16,10 +16,14 @@ We don't talk here about sshd security config, ex. `PasswordAuthentication no`, 
 
 - set your own notification mechanism. For example, you can use Discord webhook, Slack, email
 - if you're using Discord, simply update suggested Discord webhook url
-- put it on your server in `/etc/ssh/scripts/` with good permissions (`chmod 755 /etc/ssh/scripts/sshnotify.sh`)
+
+then in `/etc/ssh/scripts/` :
+- create `notify.conf` from `notify.conf.example`
+- create `sshnotify.sh` with good permissions (`chmod 755 /etc/ssh/scripts/sshnotify.sh`)
 
 ```bash
  # ls /etc/ssh/scripts/
+-rw-r--r-- 1 root root  297 Oct 12  2021 notify.conf
 -rwxr-xr-x 1 root root  742 Oct 12  2021 sshnotify.sh
 ```
 
@@ -38,4 +42,4 @@ session    optional     pam_exec.so seteuid /etc/ssh/scripts/sshnotify.sh
 ```
 
 - without logout, try to login in another terminal to verify your ssh login step is ok.
-- et voilà 
+- et voilà 🚀
